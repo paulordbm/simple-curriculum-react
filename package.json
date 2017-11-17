@@ -1,7 +1,9 @@
 {
   "name": "paulordbm-website",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "homepage": "https://paulordbm.github.io",
   "dependencies": {
     "flow-bin": "0.59.0",
     "react": "^16.1.1",
@@ -9,13 +11,16 @@
     "react-scripts": "1.0.17"
   },
   "scripts": {
-    "start": "tailwind build ./src/index.tailwind.css -o ./src/index.css && react-scripts start",
-    "build": "tailwind build ./src/index.tailwind.css -o ./src/index.css && react-scripts build",
+    "tailwind": "tailwind",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -b master",
+    "start": "tailwind build ./src/index.tailwind.css -c ./tailwind.js -o ./src/index.css && react-scripts start",
+    "build": "tailwind build ./src/index.tailwind.css -c ./tailwind.js -o ./src/index.css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "flow": "flow",
     "flow-upgrade": "flow-upgrade",
-    "tailwind": "tailwind"
+    "tailwind-build": "tailwind build ./src/index.tailwind.css -c ./tailwind.js -o ./src/index.css"
   },
   "devDependencies": {
     "flow-upgrade": "1.0.3",
