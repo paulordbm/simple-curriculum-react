@@ -12,8 +12,6 @@
   },
   "scripts": {
     "tailwind": "tailwind",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -b master",
     "start": "tailwind build ./src/index.tailwind.css -c ./tailwind.js -o ./src/index.css && react-scripts start",
     "build": "tailwind build ./src/index.tailwind.css -c ./tailwind.js -o ./src/index.css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
