@@ -26,7 +26,7 @@ const renderAchievement = item => (
   </li>
 );
 
-export const WorkExperienceSection = ({
+export const WorkExperienceSectionItem = ({
   jobTitle,
   company,
   companyDescription,

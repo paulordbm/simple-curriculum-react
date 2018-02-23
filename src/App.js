@@ -26,7 +26,7 @@ import {
   ContentSection,
   IntroSection,
   SkillsList,
-  WorkExperienceSection
+  WorkExperienceSectionItem
 } from "./components";
 import "./App.css";
 
@@ -98,7 +98,7 @@ class App extends Component<Props> {
             |--------------------------------------------------
             */}
           <ContentSection title="work experience">
-            <WorkExperienceSection
+            <WorkExperienceSectionItem
               jobTitle="Software Engineer"
               company="INDT"
               companyDescription="Non-profit, independent technology institute working with clients from the free-trade zone district of Manaus and startups."
@@ -119,7 +119,7 @@ class App extends Component<Props> {
               contactEmail="sergio.cavalcante@indt.org.br"
             />
 
-            <WorkExperienceSection
+            <WorkExperienceSectionItem
               jobTitle="Software Engineer"
               company="Toptal"
               companyDescription="Toptal a network of the top 3% of software engineering, design and finance talent, available on demand to help companies accelerate, adapt and scale."
@@ -137,7 +137,7 @@ class App extends Component<Props> {
               contactEmail="felipe.barcellos@toptal.com"
             />
 
-            <WorkExperienceSection
+            <WorkExperienceSectionItem
               jobTitle="Software Engineer"
               company="INDT"
               companyDescription="Non-profit, Nokia/Microsoft-maintained technology institute working located in the free-trade zone district of Manaus."
