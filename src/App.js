@@ -21,7 +21,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 
 // @flow
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import { ContactSection, IntroSection, SkillsSection } from "./components";
 import "./App.css";
 
 type Props = {};
@@ -29,15 +29,53 @@ type Props = {};
 class App extends Component<Props> {
   render() {
     return (
-      <div className="w-screen h-screen flex flex-col justify-center align-center bg-silver-light">
-        <div className="mx-auto max-w-sm rounded overflow-hidden shadow-lg bg-bone-lighter">
-          <img src={logo} className="w-full mx-auto h-24 app-logo" alt="logo" />
-          <div className="px-6 px-4 mb-6 text-gunmetal">
-            <div className="font-bold text-xl mb-2">Welcome to React</div>
-            <p className="text-gunmetal-light text-base">
-              To get started, edit <code>src/App.js</code> and save to reload.
-            </p>
-          </div>
+      <div className="w-screen h-screen flex flex-col justify-center align-center bg-silver-light font-roboto">
+        <div className="a4 mx-auto overflow-hidden shadow-lg bg-white">
+          {/**
+            |--------------------------------------------------
+            | Section - Introduction
+            |--------------------------------------------------
+            */}
+          <IntroSection
+            name="Paulo Renato de Barros Mendonça"
+            professionalTitle="Pragmatic and Versitile Software Engineer"
+            introduction="I have a degree in Electronics Engineering but have been developing software for more than 8 years. I'm married and have a beautiful , two years old son. I love Sim Racing, RPGs, CCGs and am a gamer since the Atari days. My versatility, creativity and ability to learn fast feed my passion for what I do."
+          />
+
+          {/**
+            |--------------------------------------------------
+            | Section - Contact Info
+            |--------------------------------------------------
+            */}
+          <ContactSection
+            email="paulo.rdbm@gmail.com"
+            city="Manaus"
+            country="Brazil"
+            linkedIn="linkedin.com/in/paulordbm"
+            phone="+55 92 99602-9580"
+            website="paulordbm.wixsite.com/resume"
+          />
+
+          {/**
+            |--------------------------------------------------
+            | Section - Skills
+            |--------------------------------------------------
+            */}
+          <SkillsSection
+            platforms={["Android", "iOS", "Windows", "Mac", "Linux"]}
+            engines={["Unity"]}
+            frameworks={[
+              "Qt",
+              "Angular",
+              "React",
+              "React Native",
+              "NodeJS",
+              "ExpressJS",
+              "MongoDB",
+              "Mongoose"
+            ]}
+            languages={["C#", "C++", "Javascript", "Typescript", "HTML", "CSS"]}
+          />
         </div>
       </div>
     );

@@ -19,11 +19,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 
 ***************************************************************************************************/
 
-.app-logo {
-  animation: app-logo-spin infinite 20s linear;
-}
-
-@keyframes app-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.a4 {
+  width: 595px;
+  height: 842px;
 }

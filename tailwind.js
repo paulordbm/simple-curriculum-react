@@ -146,47 +146,7 @@ var colors = {
   pink: "#f66d9b",
   "pink-light": "#fa7ea8",
   "pink-lighter": "#ffbbca",
-  "pink-lightest": "#ffebef",
-
-  "bone-darkest": "#292824",
-  "bone-darker": "#65635a",
-  "bone-dark": "#a19e8f",
-  bone: "#ddd8c4",
-  "bone-light": "#e6e2d4",
-  "bone-lighter": "#efede4",
-  "bone-lightest": "#f8f7f4",
-
-  "silver-darkest": "#161618",
-  "silver-darker": "#36373b",
-  "silver-dark": "#56575e",
-  silver: "#757780",
-  "silver-light": "#9a9ca2",
-  "silver-lighter": "#c0c1c5",
-  "silver-lightest": "#e5e6e7",
-
-  "gunmetal-darkest": "#080b0d",
-  "gunmetal-darker": "#141A1f",
-  "gunmetal-dark": "#212932",
-  gunmetal: "#2c3844",
-  "gunmetal-light": "#656e77",
-  "gunmetal-lighter": "#9fa4aa",
-  "gunmetal-lightest": "#d8dadd",
-
-  "sunset-darkest": "#23100e",
-  "sunset-darker": "#562723",
-  "sunset-dark": "#8a3e39",
-  sunset: "#bd554d",
-  "sunset-light": "#cf837d",
-  "sunset-lighter": "#e1b1ae",
-  "sunset-lightest": "#f3e0de",
-
-  "steel-darkest": "#0f181a",
-  "steel-darker": "#253b41",
-  "steel-dark": "#3b5e68",
-  steel: "#50808e",
-  "steel-light": "#7fa2ac",
-  "steel-lighter": "#1fc5cb",
-  "steel-lightest": "#dfe7ea"
+  "pink-lightest": "#ffebef"
 };
 
 module.exports = {
@@ -282,6 +242,10 @@ module.exports = {
       "Liberation Mono",
       "Courier New",
       "monospace"
+    ],
+    roboto: [
+      "Roboto",
+      "sans-serif"
     ]
   },
 
