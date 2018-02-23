@@ -10,19 +10,19 @@ type propTypes = {
 
 const renderSkillBox = (skillName: string, color: string) => (
   <div
-    className={`p-2 mr-2 mb-2 bg-${color} rounded text-grey-lightest text-sm font-light`}
+    className={`p-1 mr-1 mb-1 bg-${color} rounded text-grey-lightest text-xs font-normal`}
   >
     {skillName}
   </div>
 );
 
-export const SkillsSection = ({
+export const SkillsList = ({
   platforms,
   engines,
   frameworks,
   languages
 }: propTypes) => {
-  var skillBoxes = [];
+  let skillBoxes = [];
   for (const platform of platforms) {
     skillBoxes.push(renderSkillBox(platform, "grey-dark"));
   }
@@ -39,10 +39,5 @@ export const SkillsSection = ({
     skillBoxes.push(renderSkillBox(language, "purple-dark"));
   }
 
-  return (
-    <div className="pt-2 pb-2 pl-6 pr-6 flex flex-col">
-      <h1 className="font-semibold text-lg underline uppercase">Skills</h1>
-      <div className="pt-2 flex flex-row flex-wrap">{skillBoxes}</div>
-    </div>
-  );
+  return <div className="pt-2 flex flex-row flex-wrap">{skillBoxes}</div>;
 };

@@ -1,5 +1,7 @@
 import { ContactSection } from "./ContactSection";
+import { ContentSection } from "./ContentSection";
 import { IntroSection } from "./IntroSection";
-import { SkillsSection } from "./SkillsSection";
+import { SkillsList } from "./SkillsList";
+import { WorkExperienceSection } from "./WorkExperienceSection";
 
-export { ContactSection, IntroSection, SkillsSection };
+export { ContactSection, ContentSection, IntroSection, SkillsList, WorkExperienceSection };

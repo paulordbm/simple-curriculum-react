@@ -243,10 +243,7 @@ module.exports = {
       "Courier New",
       "monospace"
     ],
-    roboto: [
-      "Roboto",
-      "sans-serif"
-    ]
+    roboto: ["Roboto", "sans-serif"]
   },
 
   /*
@@ -269,6 +266,8 @@ module.exports = {
   */
 
   textSizes: {
+    "3xs": ".25rem", // 8px
+    "2xs": ".5rem", // 10px
     xs: ".75rem", // 12px
     sm: ".875rem", // 14px
     base: "1rem", // 16px

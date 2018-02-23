@@ -619,6 +619,14 @@ button,
   appearance: none;
 }
 
+.text-3xs {
+  font-size: .25rem;
+}
+
+.text-2xs {
+  font-size: .5rem;
+}
+
 .text-xs {
   font-size: .75rem;
 }
@@ -3578,6 +3586,14 @@ button,
 
   .sm\:appearance-none {
     appearance: none;
+  }
+
+  .sm\:text-3xs {
+    font-size: .25rem;
+  }
+
+  .sm\:text-2xs {
+    font-size: .5rem;
   }
 
   .sm\:text-xs {
@@ -6540,6 +6556,14 @@ button,
     appearance: none;
   }
 
+  .md\:text-3xs {
+    font-size: .25rem;
+  }
+
+  .md\:text-2xs {
+    font-size: .5rem;
+  }
+
   .md\:text-xs {
     font-size: .75rem;
   }
@@ -9500,6 +9524,14 @@ button,
     appearance: none;
   }
 
+  .lg\:text-3xs {
+    font-size: .25rem;
+  }
+
+  .lg\:text-2xs {
+    font-size: .5rem;
+  }
+
   .lg\:text-xs {
     font-size: .75rem;
   }
@@ -12458,6 +12490,14 @@ button,
 
   .xl\:appearance-none {
     appearance: none;
+  }
+
+  .xl\:text-3xs {
+    font-size: .25rem;
+  }
+
+  .xl\:text-2xs {
+    font-size: .5rem;
   }
 
   .xl\:text-xs {
