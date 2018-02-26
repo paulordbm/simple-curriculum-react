@@ -24,6 +24,7 @@ import React, { Component } from "react";
 import {
   ContactSection,
   ContentSection,
+  EducationSectionItem,
   IntroSection,
   SkillsList,
   WorkExperienceSectionItem
@@ -156,6 +157,17 @@ class App extends Component<Props> {
               contactName="Sérgio Cavalcante"
               contactRole="Product Owner"
               contactEmail="sergio.cavalcante@indt.org.br"
+            />
+          </ContentSection>
+
+          <ContentSection title="education">
+            <EducationSectionItem
+              degree="Bachelor's in Electronics Engineering"
+              institution="Federal University of Amazonas (UFAM)"
+              startDate={new Date(2006, 5)}
+              endDate={new Date(2013, 1)}
+              city="Manaus"
+              country="Amazonas"
             />
           </ContentSection>
         </div>
