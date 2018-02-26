@@ -29,8 +29,8 @@ type propTypes = {
 
 export const ContentSection = ({ children, title }: propTypes) => {
   return (
-    <div className="pt-2 pb-2 pl-6 pr-6 flex flex-col">
-      <h1 className="font-semibold text-lg text-blue-dark underline uppercase">
+    <div className="pt-1 pb-1 pl-6 pr-6 flex flex-col">
+      <h1 className="font-semibold text-base text-blue-dark underline uppercase">
         {title}
       </h1>
       {children}

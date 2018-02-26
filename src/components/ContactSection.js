@@ -40,7 +40,7 @@ export const ContactSection = ({
   website
 }: propTypes) => {
   return (
-    <div className="pt-2 pb-2 pl-6 pr-6 bg-indigo-darkest flex flex-row text-sm text-grey-lightest">
+    <div className="pt-2 pb-2 pl-6 pr-6 bg-indigo-darkest flex flex-row text-xs text-grey-lightest">
       <div className="flex flex-col w-1/2">
         <div className="flex-row">
           <i className="w-4 text-center fa fa-envelope mr-2" />

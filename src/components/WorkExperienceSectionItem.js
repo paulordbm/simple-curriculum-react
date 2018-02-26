@@ -22,6 +22,8 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 // @flow
 import React from "react";
 
+import { ListItem } from "./ListItem";
+
 type propTypes = {
   jobTitle: string,
   company: string,
@@ -37,15 +39,6 @@ type propTypes = {
   contactRole: string,
   contactEmail: string
 };
-
-const renderAchievement = item => (
-  <li className="pt-1 font-normal text-blue-darkest text-sm flex flex-row">
-    <div className="w-2 mr-2 text-2xs text-blue text-center">
-      <i className="mt-1 fa fa-circle" />
-    </div>
-    {item}
-  </li>
-);
 
 export const WorkExperienceSectionItem = ({
   jobTitle,
@@ -74,7 +67,7 @@ export const WorkExperienceSectionItem = ({
   let listItems = [];
 
   for (const achievement of achievements) {
-    listItems.push(renderAchievement(achievement));
+    listItems.push(<ListItem item={achievement} />);
   }
 
   return (

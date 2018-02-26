@@ -22,40 +22,23 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 // @flow
 import React from "react";
 
-import { ListItem } from "./ListItem";
-
 type propTypes = {
-  awardTitle: string,
-  awardIssuer: string,
+  children: Object,
   date: Date,
-  achievements: string[]
+  currentPage: number,
+  maxPages: number
 };
 
-export const AwardsSectionItem = ({
-  awardTitle,
-  awardIssuer,
-  date,
-  achievements
-}: propTypes) => {
-  const dateString = `${date.getMonth()}/${date.getFullYear()}`;
-
-  let listItems = [];
-
-  for (const achievement of achievements) {
-    listItems.push(<ListItem item={achievement} />);
-  }
-
+export const Page = ({ children, date, currentPage, maxPages }: propTypes) => {
   return (
-    <div className="pt-2 pb-2">
-      <h3 className="font-normal text-blue-darkest text-sm">{awardTitle}</h3>
-      <div className="flex flex-word items-center">
-        <p className="mr-1 font-normal italic text-grey-dark text-xs">
-          {awardIssuer}
+    <div className="a4 overflow-hidden bg-white rounded-sm relative shadow-lg">
+      {children}
+      <div className="flex flex-row justify-between w-full absolute pin-b pb-1 pl-6 pr-6">
+        <p className="italic text-grey text-xs">
+          {`${date.getMonth()}/${date.getFullYear()}`}
         </p>
-        {" - "}
-        <p className="ml-1 font-light italic text-xs text-blue">{dateString}</p>
+        <p className="italic text-grey text-xs">{`Page ${currentPage} of ${maxPages}`}</p>
       </div>
-      <ul className="list-reset">{listItems}</ul>
     </div>
   );
 };

@@ -22,40 +22,17 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 // @flow
 import React from "react";
 
-import { ListItem } from "./ListItem";
-
 type propTypes = {
-  awardTitle: string,
-  awardIssuer: string,
-  date: Date,
-  achievements: string[]
+  item: string
 };
 
-export const AwardsSectionItem = ({
-  awardTitle,
-  awardIssuer,
-  date,
-  achievements
-}: propTypes) => {
-  const dateString = `${date.getMonth()}/${date.getFullYear()}`;
-
-  let listItems = [];
-
-  for (const achievement of achievements) {
-    listItems.push(<ListItem item={achievement} />);
-  }
-
+export const ListItem = ({ item }: propTypes) => {
   return (
-    <div className="pt-2 pb-2">
-      <h3 className="font-normal text-blue-darkest text-sm">{awardTitle}</h3>
-      <div className="flex flex-word items-center">
-        <p className="mr-1 font-normal italic text-grey-dark text-xs">
-          {awardIssuer}
-        </p>
-        {" - "}
-        <p className="ml-1 font-light italic text-xs text-blue">{dateString}</p>
+    <li className="pt-1 font-normal text-blue-darkest text-xs flex flex-row">
+      <div className="w-2 mr-2 text-2xs text-blue text-center">
+        <i className="mt-1 fa fa-circle" />
       </div>
-      <ul className="list-reset">{listItems}</ul>
-    </div>
+      {item}
+    </li>
   );
 };

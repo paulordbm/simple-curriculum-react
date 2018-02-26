@@ -25,6 +25,8 @@ import { ContentSection } from "./ContentSection";
 import { EducationSectionItem } from "./EducationSectionItem";
 import { IntroSection } from "./IntroSection";
 import { LanguageSectionItem } from "./LanguageSectionItem";
+import { ListItem } from "./ListItem";
+import { Page } from "./Page";
 import { PersonalProjectsSectionItem } from "./PersonalProjectsSectionItem";
 import { SkillsList } from "./SkillsList";
 import { WorkExperienceSectionItem } from "./WorkExperienceSectionItem";
@@ -36,6 +38,8 @@ export {
   EducationSectionItem,
   IntroSection,
   LanguageSectionItem,
+  ListItem,
+  Page,
   PersonalProjectsSectionItem,
   SkillsList,
   WorkExperienceSectionItem
