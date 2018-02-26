@@ -26,6 +26,7 @@ import {
   ContentSection,
   EducationSectionItem,
   IntroSection,
+  LanguageSectionItem,
   SkillsList,
   WorkExperienceSectionItem
 } from "./components";
@@ -160,6 +161,11 @@ class App extends Component<Props> {
             />
           </ContentSection>
 
+          {/**
+            |--------------------------------------------------
+            | Content Section - Education
+            |--------------------------------------------------
+            */}
           <ContentSection title="education">
             <EducationSectionItem
               degree="Bachelor's in Electronics Engineering"
@@ -169,6 +175,22 @@ class App extends Component<Props> {
               city="Manaus"
               country="Amazonas"
             />
+          </ContentSection>
+
+          {/**
+            |--------------------------------------------------
+            | Content Section - Language
+            |--------------------------------------------------
+            */}
+          <ContentSection title="language">
+            <div className="flex flex-row">
+              <LanguageSectionItem
+                language="Portuguese"
+                proficiency={5}
+                isNative={true}
+              />
+              <LanguageSectionItem language="English" proficiency={5} />
+            </div>
           </ContentSection>
         </div>
       </div>

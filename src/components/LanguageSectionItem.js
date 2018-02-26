@@ -19,20 +19,46 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 
 ***************************************************************************************************/
 
-import { ContactSection } from "./ContactSection";
-import { ContentSection } from "./ContentSection";
-import { EducationSectionItem } from "./EducationSectionItem";
-import { IntroSection } from "./IntroSection";
-import { LanguageSectionItem } from "./LanguageSectionItem";
-import { SkillsList } from "./SkillsList";
-import { WorkExperienceSectionItem } from "./WorkExperienceSectionItem";
+// @flow
+import React from "react";
 
-export {
-  ContactSection,
-  ContentSection,
-  EducationSectionItem,
-  IntroSection,
-  LanguageSectionItem,
-  SkillsList,
-  WorkExperienceSectionItem
+type propTypes = {
+  language: string,
+  proficiency: 1 | 2 | 3 | 4 | 5,
+  isNative: boolean
+};
+
+const proficiencyDescription = (
+  proficiency: 1 | 2 | 3 | 4 | 5,
+  isNative: boolean
+) => {
+  switch (proficiency) {
+    case 1:
+      return "Elementary Proficiency";
+    case 2:
+      return "Limited Working Proficiency";
+    case 3:
+      return "Professional Working Proficiency";
+    case 4:
+      return "Full Professional Proficiency";
+    case 5:
+      return isNative ? "Native Proficiency" : "Bilingual Proficiency";
+    default:
+      return "";
+  }
+};
+
+export const LanguageSectionItem = ({
+  language,
+  proficiency,
+  isNative
+}: propTypes) => {
+  return (
+    <div className="pt-2 pb-2 mr-4">
+      <h1 className="font-bold text-blue-darkest text-sm">{language}</h1>
+      <p className="mt-1 font-light italic text-xs text-blue">
+        {proficiencyDescription(proficiency, isNative)}
+      </p>
+    </div>
+  );
 };
