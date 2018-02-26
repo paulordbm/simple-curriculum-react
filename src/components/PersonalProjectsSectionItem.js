@@ -19,22 +19,49 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 
 ***************************************************************************************************/
 
-import { ContactSection } from "./ContactSection";
-import { ContentSection } from "./ContentSection";
-import { EducationSectionItem } from "./EducationSectionItem";
-import { IntroSection } from "./IntroSection";
-import { LanguageSectionItem } from "./LanguageSectionItem";
-import { PersonalProjectsSectionItem } from "./PersonalProjectsSectionItem";
-import { SkillsList } from "./SkillsList";
-import { WorkExperienceSectionItem } from "./WorkExperienceSectionItem";
+// @flow
+import React from "react";
 
-export {
-  ContactSection,
-  ContentSection,
-  EducationSectionItem,
-  IntroSection,
-  LanguageSectionItem,
-  PersonalProjectsSectionItem,
-  SkillsList,
-  WorkExperienceSectionItem
+type propTypes = {
+  projectTitle: string,
+  startDate: Date,
+  endDate: Date,
+  isPresent: boolean,
+  achievements: string[]
+};
+
+const renderAchievement = item => (
+  <li className="pt-1 font-normal text-blue-darkest text-sm flex flex-row">
+    <div className="w-2 mr-2 text-2xs text-blue text-center">
+      <i className="mt-1 fa fa-circle" />
+    </div>
+    {item}
+  </li>
+);
+
+export const PersonalProjectsSectionItem = ({
+  projectTitle,
+  startDate,
+  endDate,
+  isPresent,
+  achievements
+}: propTypes) => {
+  let dateString = `${startDate.getMonth()}/${startDate.getFullYear()} - `;
+  dateString = dateString.concat(
+    isPresent ? "Present" : `${endDate.getMonth()}/${endDate.getFullYear()}`
+  );
+
+  let listItems = [];
+
+  for (const achievement of achievements) {
+    listItems.push(renderAchievement(achievement));
+  }
+
+  return (
+    <div className="pt-2 pb-2">
+      <h3 className="font-normal text-blue-darkest text-sm">{projectTitle}</h3>
+      <p className="mt-1 font-light italic text-xs text-blue">{dateString}</p>
+      <ul className="list-reset">{listItems}</ul>
+    </div>
+  );
 };

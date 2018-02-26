@@ -27,6 +27,7 @@ import {
   EducationSectionItem,
   IntroSection,
   LanguageSectionItem,
+  PersonalProjectsSectionItem,
   SkillsList,
   WorkExperienceSectionItem
 } from "./components";
@@ -191,6 +192,34 @@ class App extends Component<Props> {
               />
               <LanguageSectionItem language="English" proficiency={5} />
             </div>
+          </ContentSection>
+
+          {/**
+            |--------------------------------------------------
+            | Content Section - Language
+            |--------------------------------------------------
+            */}
+          <ContentSection title="personal projects">
+            <PersonalProjectsSectionItem
+              projectTitle="The Battles Untold"
+              startDate={new Date(2015, 4)}
+              endDate={new Date(2015, 5)}
+              achievements={[
+                "Brawler game developed for the Public Domain Jam 2. It features multiple playable characters, local multiplayer and singleplayer with AI-controlled bots. I was responsible for developing all the character controls, animations, special effects and gameplay mechanics. I also integrated everything with a custom built, hitbox engine."
+              ]}
+            />
+
+            <PersonalProjectsSectionItem
+              projectTitle="Shae, RelationShip, Break Up"
+              startDate={new Date(2014, 5)}
+              endDate={new Date(2014, 6)}
+              achievements={[
+                `Set of games developed during a post grad specialization course in electronic games. The games follow a "bad kind of love" theme.`,
+                "Shae is a platform game for the web, where the player is tasked with escaping the grasps of love by stealthily navigating the map to find a key to open the door to the next level. In this game I developed the player controls and mechanics, as well as special effects and sounds.",
+                "RelationShip is a sort of Flappy Birds clone with slightly different controls. In this game, the player inputs their loved-one/crush name and tries to go past stages of a relationship. When the game ends, so does your relationship (in the game, at least) and the game presents the history of events (number of kisses, marriage, kids, etc.).",
+                "Break Up is a Breakout clone where the player has to get rid of the building blocks of their dangerous relationship. I helped develop a vanilla Javascript game framework, as well as gameplay mechanics and sounds."
+              ]}
+            />
           </ContentSection>
         </div>
       </div>
