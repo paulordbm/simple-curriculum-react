@@ -22,6 +22,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 // @flow
 import React, { Component } from "react";
 import {
+  AwardsSectionItem,
   ContactSection,
   ContentSection,
   EducationSectionItem,
@@ -220,6 +221,44 @@ class App extends Component<Props> {
                 "Break Up is a Breakout clone where the player has to get rid of the building blocks of their dangerous relationship. I helped develop a vanilla Javascript game framework, as well as gameplay mechanics and sounds."
               ]}
             />
+          </ContentSection>
+
+          {/**
+            |--------------------------------------------------
+            | Content Section - Awards Section
+            |--------------------------------------------------
+            */}
+          <ContentSection title="honor awards">
+            <div className="flex flex-row">
+              <div className="w-1/2">
+                <AwardsSectionItem
+                  awardTitle="Honorable Mention"
+                  awardIssuer="SBGames 2013"
+                  date={new Date(2013, 10)}
+                  achievements={["Best prototype game with Mutant Eggs."]}
+                />
+                <AwardsSectionItem
+                  awardTitle="Best Game - Art"
+                  awardIssuer="SBGames 2013"
+                  date={new Date(2013, 10)}
+                  achievements={["3rd place with Wake Woody."]}
+                />
+              </div>
+              <div className="ml-4 w-1/2">
+                <AwardsSectionItem
+                  awardTitle="Best Game - Technology"
+                  awardIssuer="SBGames 2013"
+                  date={new Date(2013, 10)}
+                  achievements={["3rd place with Wake Woody."]}
+                />
+                <AwardsSectionItem
+                  awardTitle="Best Game - Sound/Music"
+                  awardIssuer="SBGames 2014"
+                  date={new Date(2014, 11)}
+                  achievements={["Awarded to Woody, Endless Summer."]}
+                />
+              </div>
+            </div>
           </ContentSection>
         </div>
       </div>
