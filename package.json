@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "flow-upgrade": "1.0.3",
+    "react-to-print": "1.0.10",
     "tailwindcss": "0.1.6"
   }
 }

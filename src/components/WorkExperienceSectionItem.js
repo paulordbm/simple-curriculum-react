@@ -67,7 +67,7 @@ export const WorkExperienceSectionItem = ({
   let listItems = [];
 
   for (const achievement of achievements) {
-    listItems.push(<ListItem item={achievement} />);
+    listItems.push(<ListItem key={achievement} item={achievement} />);
   }
 
   return (

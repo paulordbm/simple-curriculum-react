@@ -31,7 +31,7 @@ type propTypes = {
 
 export const Page = ({ children, date, currentPage, maxPages }: propTypes) => {
   return (
-    <div className="a4 overflow-hidden bg-white rounded-sm relative shadow-lg">
+    <div className="a4 overflow-hidden bg-white relative">
       {children}
       <div className="flex flex-row justify-between w-full absolute pin-b pb-1 pl-6 pr-6">
         <p className="italic text-grey text-xs">

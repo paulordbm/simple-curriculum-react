@@ -28,6 +28,7 @@ import { LanguageSectionItem } from "./LanguageSectionItem";
 import { ListItem } from "./ListItem";
 import { Page } from "./Page";
 import { PersonalProjectsSectionItem } from "./PersonalProjectsSectionItem";
+import { RoundedButton } from "./RoundedButton.js";
 import { SkillsList } from "./SkillsList";
 import { WorkExperienceSectionItem } from "./WorkExperienceSectionItem";
 
@@ -41,6 +42,7 @@ export {
   ListItem,
   Page,
   PersonalProjectsSectionItem,
+  RoundedButton,
   SkillsList,
   WorkExperienceSectionItem
 };

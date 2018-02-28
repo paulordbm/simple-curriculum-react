@@ -30,7 +30,7 @@ export const ListItem = ({ item }: propTypes) => {
   return (
     <li className="pt-1 font-normal text-blue-darkest text-xs flex flex-row">
       <div className="w-2 mr-2 text-2xs text-blue text-center">
-        <i className="mt-1 fa fa-circle" />
+        &#9679;
       </div>
       {item}
     </li>
