@@ -42,26 +42,26 @@ export const ContactSection = ({
   return (
     <div className="pt-2 pb-2 pl-6 pr-6 bg-indigo-darkest flex flex-row text-xs text-grey-lightest">
       <div className="flex flex-col w-1/2">
-        <div className="flex-row">
-          <i className="w-4 text-center fa fa-envelope mr-2" />
+        <div className="flex-row items-center">
+          <img className="w-3 mr-2" alt="" src="/icons/envelope-closed.svg" />
           {email}
         </div>
-        <div className="flex-row mt-1 mb-1">
-          <i className="w-4 text-center fa fa-map-marker mr-2" />
+        <div className="flex-row mt-1 mb-1 items-center">
+          <img className="w-3 mr-2" alt="" src="/icons/map-marker.svg" />
           {city}, {country}
         </div>
-        <div className="flex-row">
-          <i className="w-4 text-center fa fa-linkedin mr-2" />
+        <div className="flex-row items-center">
+          <img className="w-3 mr-2" alt="" src="/icons/linkedin.svg" />
           {linkedIn}
         </div>
       </div>
       <div className="flex flex-col w-1/2">
-        <div className="flex-row">
-          <i className="w-4 text-center fa fa-mobile mr-2" />
+        <div className="flex-row items-center">
+          <img className="w-3 mr-2" alt="" src="/icons/phone.svg" />
           {phone}
         </div>
-        <div className="flex-row mt-1">
-          <i className="w-4 text-center fa fa-globe mr-2" />
+        <div className="flex-row mt-1 items-center">
+          <img className="w-3 mr-2" alt="" src="/icons/globe.svg" />
           {website}
         </div>
       </div>

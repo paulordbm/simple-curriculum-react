@@ -42,7 +42,7 @@ type Props = {};
 class Page1 extends Component {
   render() {
     return (
-      <Page currentPage={1} maxPages={2} date={new Date(2018, 2)}>
+      <Page currentPage={1} maxPages={2} date={new Date()}>
         {/**
           |--------------------------------------------------
           | Section - Introduction
@@ -142,7 +142,7 @@ class Page1 extends Component {
 class Page2 extends Component {
   render() {
     return (
-      <Page currentPage={2} maxPages={2} date={new Date(2018, 2)}>
+      <Page currentPage={2} maxPages={2} date={new Date()}>
         {/**
           |--------------------------------------------------
           | Content Section - Work Experience
